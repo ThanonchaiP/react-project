@@ -1,0 +1,199 @@
+nav {
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.navbar-logo {
+    padding: 0 1.5rem;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(81, 131, 81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-piggy-bank {
+    margin-right: .5rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-menu {
+    width: 100%;
+    height: 100%;
+    padding: 0 2.5rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+ul.menu li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 1.5rem;
+    height: 100%;
+}
+
+.menu-link {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.menu-link:hover {
+    color: rgb(235, 179, 38);
+}
+
+.navbar-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-btn {
+    font-size: 18px;
+    margin-left: 1.5rem;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 15px;
+    background-color: dodgerblue;
+    transition: .3s;
+}
+
+.navbar-btn:hover {
+    background-color: deeppink;
+    color: #fff;
+}
+
+.navbar-profile {
+    background-color: burlywood;
+    height: 100%;
+    width: fit-content;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.menu-icon i {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+}
+
+@media screen and (max-width:1550px) {
+    .navbar-logo {
+        width: 30%;
+    }
+    .navbar-menu {
+        width: 70%;
+    }
+}
+
+@media (max-width:1135px) {
+    ul.menu {
+        position: absolute;
+        top: 80px;
+        height: auto;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        opacity: 1;
+        background-color: #131313;
+        z-index: -1;
+        transition: all 0.4s ease-in-out;
+    }
+    .menu.active {
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+    .menu-icon i {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:1115px) {
+    .navbar-logo {
+        width: 35%;
+    }
+    .navbar-menu {
+        width: 65%;
+    }
+}
+
+/* Navbar dropdown */
+
+.navbar-menu ul.submenu {
+    position: absolute;
+    top: 82px;
+    background: #fff;
+    width: 300px;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    font-size: 17px;
+}
+
+.navbar-menu ul.submenu li {
+    background: #000;
+    margin: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 16px 1.5rem;
+    display: block;
+}
+
+.navbar-menu ul.submenu li a {
+    color: #fff;
+}
+
+.navbar-menu ul.submenu li a:hover {
+    color: rgb(194, 194, 194);
+}
+
+.navbar-menu ul.submenu li a::before {
+    display: none;
+}
+
+.navbar-menu ul li:hover>.submenu {
+    opacity: 1;
+    visibility: visible;
+    top: 82px;
+}

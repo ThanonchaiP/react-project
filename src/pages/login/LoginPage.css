@@ -1,0 +1,204 @@
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-container::before, .login-container::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 500px;
+}
+
+.login-container::before {
+    background-image: linear-gradient(to right, #D65BCA, #21D190);
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.login-container::after {
+    background-image: linear-gradient(to right, #21D190, #D65BCA);
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.login {
+    text-align: center;
+    position: relative;
+}
+
+input, button {
+    width: 100%;
+    border: 0;
+    border-radius: 20px;
+}
+
+input {
+    border-bottom: 2px solid #444;
+    padding: 12px 40px 12px 20px;
+    outline: none;
+}
+
+/* Radio */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.checkbox-tools:checked + label,
+.checkbox-tools:not(:checked) + label{
+	position: relative;
+	display: inline-block;
+	padding: 15px 20px;
+	width: 150px;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #000;
+	-webkit-transition: all 0.2s linear;
+	transition: all .2s linear;
+    border: 2px solid #da2c4d; 
+}
+.checkbox-tools:not(:checked) + label{
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-tools:checked + label,
+.checkbox-tools:checked + label i{
+    color: #fff;
+}
+
+.checkbox-tools:checked + label::before,
+.checkbox-tools:not(:checked) + label::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background-image: linear-gradient(to right, #ff1464, purple);
+	z-index: -1;
+}
+
+.role-btn i{
+    font-size: 1.3rem;
+}
+
+/* Radio */
+
+
+input, button, .group i, p, a {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.group {
+    margin-top: 10px;
+    position: relative;
+}
+
+.group i {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+button.login {
+    color: #fff;
+    padding: 12px;
+    background-image: linear-gradient(to right, #ff1464, purple);
+    margin: 20px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+button.login:hover {
+    background-image: linear-gradient(to right, purple, #ff1464);
+}
+
+button.login, button.login i {
+    margin-right: 5px;
+}
+
+button.login i {
+    color: #fff;
+}
+
+.fs {
+    margin-bottom: 5px;
+}
+
+i.fa-star-of-david {
+    font-size: 60px;
+    color: deeppink;
+    margin-bottom: 10px;
+}
+
+input:focus, input:focus::placeholder, input:focus+i {
+    color: #ff1464;
+}
+
+/* body::before, body::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 500px;
+}
+
+body::before {
+    background-image: linear-gradient(to right, #D65BCA, #21D190);
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+body::after {
+    background-image: linear-gradient(to right, #21D190, #D65BCA);
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+} */
+
+a {
+    color: #ff1464;
+}
+
+/* Error input form */
+.err-msg{
+    text-align: left;
+    margin: 5px 0px 0px 15px;
+    color: #ff1464;
+    font-size: 14px;
+}
+
+@media (max-width:767px) {
+    .login-container::before, .login-container::after {
+        height: 150px;
+        width: 300px;
+    }
+    input, button, .group i, p, a {
+        font-size: 14px;
+    }
+}

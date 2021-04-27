@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Header = styled.div`
   height: 180px;
-  background-color:${props => props.img};
+  background: red url(${props => props.img}) no-repeat center;
+  background-size:cover;
   display:flex;
   align-items:center;
   justify-content:center;

@@ -1,12 +1,17 @@
 import React from "react";
 import { Header, TextHeader } from "../../style/header/Header";
-import { ContentTitle, Text, ContentContainer,Table } from "./StudentPage.elements";
+import {
+  ContentTitle,
+  Text,
+  ContentContainer,
+  Table,
+} from "./StudentPage.elements";
 import { Dropdown } from "react-bootstrap";
 
 const StudentPage = () => {
   return (
     <>
-      <Header img="red">
+      <Header img="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80">
         <TextHeader>ข้อมูลนักเรียน</TextHeader>
       </Header>
       <ContentContainer>
@@ -16,9 +21,8 @@ const StudentPage = () => {
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               ปีการศึกษา
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-1">Aหกดฟหกดn</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>

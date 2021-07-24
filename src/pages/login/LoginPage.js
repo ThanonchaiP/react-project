@@ -52,7 +52,12 @@ const LoginPage = () => {
       //update userContext
       const profileValue = JSON.parse(localStorage.getItem("profile")); // get profile from localStorage
       userStore.updateProfile(profileValue);
-      history.replace("/");
+      
+      if (data.role === "teacher") {
+        history.replace("/classroom");
+      } else {
+        history.replace("/dashboard");
+      }
 
       addToast("เข้าสู่ระบบสำเร็จ", {
         appearance: "success",

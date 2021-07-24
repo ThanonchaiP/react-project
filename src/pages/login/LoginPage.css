@@ -33,13 +33,12 @@
     position: relative;
 }
 
-input, button {
+.group input, button {
     width: 100%;
     border: 0;
-    border-radius: 20px;
 }
 
-input {
+.group input {
     border-bottom: 2px solid #444;
     padding: 12px 40px 12px 20px;
     outline: none;
@@ -109,7 +108,7 @@ input {
 /* Radio */
 
 
-input, button, .group i, p, a {
+.group input, button, .group i, p, a {
     font-size: 20px;
     font-weight: 600;
 }
@@ -156,7 +155,7 @@ i.fa-star-of-david {
     margin-bottom: 10px;
 }
 
-input:focus, input:focus::placeholder, input:focus+i {
+.group input:focus, .group input:focus::placeholder, .group input:focus+i {
     color: #ff1464;
 }
 

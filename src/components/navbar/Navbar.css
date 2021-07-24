@@ -13,7 +13,7 @@ nav {
     padding: 0 1.5rem;
     height: 100%;
     width: 30%;
-    background-color: rgb(81, 131, 81);
+    background-color: rgb(37, 132, 88);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,6 +77,7 @@ ul.menu li {
 .navbar-btn {
     font-size: 18px;
     margin-left: 1.5rem;
+    width: 180px;
     color: #fff;
     border-radius: 4px;
     padding: 7px 15px;
